@@ -3,7 +3,7 @@ function Hello(props) {
 }
 
 function App() {
-  let name1 = "Bharathiraja";
+  let name1 = "Bharathi Raja";
   return (
     <div>
       <Hello name={name1} />
