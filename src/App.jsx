@@ -1,26 +1,47 @@
 import React, { useState } from "react";
+import Display from "./Components/Display";
+
+function Button(props) {
+  return <button onClick={props.onClick}>{props.ButtonName}</button>;
+}
 
 function App() {
   const [counter, setCounter] = useState(0);
 
-  function handleClick() {
+  function handlePlusClick() {
     setCounter(counter + 1);
   }
-  function handleClickMinus() {
+
+  function handleMinusClick() {
     setCounter(counter - 1);
   }
-  function handleClickZero() {
+
+  function handleZeroClick() {
     setCounter(0);
   }
 
   return (
     <div>
-      <p>{counter}</p>
-      <button onClick={handleClick}>plus</button>
-      <button onClick={handleClickMinus}>minus</button>
-      <button onClick={handleClickZero}>Zero</button>
+      <Display counter={counter} />
+      <Button onClick={handlePlusClick} ButtonName="plus" />
+      <Button onClick={handleMinusClick} ButtonName="minus" />
+      <Button onClick={handleZeroClick} ButtonName="zero" />
     </div>
   );
 }
 
 export default App;
+/*
+
+Button tag like this :
+
+<Button onClick={handlePlusClick} ButtonName="plus" />
+<Button onClick={handleMinusClick} ButtonName="minus" />
+<Button onClick={handleZeroClick} ButtonName="zero" />
+
+Button.jsx file return funtion :
+
+function Button(props) {
+    return <button onClick={props.onClick}>{props.ButtonName}</button>;
+  }
+*/
