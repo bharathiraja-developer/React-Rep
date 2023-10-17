@@ -1,9 +1,10 @@
 import React from "react";
+import Cart from "./components/Cart";
 
 function App() {
   return (
     <div>
-      <p>App initialization</p>
+      <Cart />
     </div>
   );
 }
