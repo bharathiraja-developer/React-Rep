@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "./components/Button";
+import "bootstrap/dist/css/bootstrap.css";
 import "./Styles/Button.css";
 
 function App() {
@@ -49,19 +50,19 @@ function App() {
   return (
     <div>
       <br></br>
-      <div className="row">{status}</div>
+      <div className="text-center">{status}</div>
       <br></br>
-      <div className="row">
+      <div className="text-center button-row">
         <Button value={states[0]} onClick={() => handleClick(0)} />
         <Button value={states[1]} onClick={() => handleClick(1)} />
         <Button value={states[2]} onClick={() => handleClick(2)} />
       </div>
-      <div className="row">
+      <div className="text-center button-row">
         <Button value={states[3]} onClick={() => handleClick(3)} />
         <Button value={states[4]} onClick={() => handleClick(4)} />
         <Button value={states[5]} onClick={() => handleClick(5)} />
       </div>
-      <div className="row">
+      <div className="text-center button-row">
         <Button value={states[6]} onClick={() => handleClick(6)} />
         <Button value={states[7]} onClick={() => handleClick(7)} />
         <Button value={states[8]} onClick={() => handleClick(8)} />
